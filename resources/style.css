@@ -40,22 +40,23 @@ html, body {
 }
 
 .aside {
-    padding: 20px;
     background-color: lightgoldenrodyellow;
-    flex: 1 1 10%;
+    width: 50%;
 }
 
 .article {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+}
+
+.article > div {
+    padding: 20px;
 }
 
 .article-text {
     background-color: rgb(50, 68, 148);
-    padding: 20px;
+    display: flex;
 }
+
 .article-quote {
     background-color: rgb(117, 182, 223);
 }
@@ -68,34 +69,21 @@ html, body {
 }
 
 
-
-@media all and (max-width: 768px) {
+/* On screens that are 768px or less */
+@media screen and (max-width: 768px) {
     .main-part {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: list-item;
     }
 
-    .main-part > div {
-        margin: auto;
-        align-items: center;
-        justify-content: center;
+    .aside {
         width: 100%;
     }
 }
 
-@media all and (max-width: 480px) {
+
+/* On screens that are 480px or less */
+@media screen and (max-width: 480px) {
     .nav-bar {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .nav-bar > div {
-        max-width: 480px
-    }
-    .main-part > div {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: list-item;
     }
 }
